@@ -55,11 +55,13 @@
   <PlatformList version="1.0"/>
   <Group label="ex_autocomplete" language="Genero" targetDirectory="$(ProjectDir)">
     <Application binaryName="ex_autocomplete" id="1919962940" label="ex_autocomplete">
-      <File filePath="airports.dat"/>
+      <VirtualFolder label="data">
+        <File filePath="airports.dat"/>
+        <File filePath="country.dat"/>
+      </VirtualFolder>
       <File filePath="auto_completion.4gl"/>
       <File filePath="auto_completion.4st"/>
       <File filePath="auto_completion.per"/>
-      <File filePath="country.dat"/>
     </Application>
   </Group>
 </Project>
