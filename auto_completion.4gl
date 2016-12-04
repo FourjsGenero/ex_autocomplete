@@ -91,7 +91,7 @@ DEFINE country_name CHAR(50)
             CALL completer_list.clear()
             LET filter = FGL_DIALOG_GETBUFFER()
             IF filter.getLength() >= MINIMUM_COMPLETER_LENGTH THEN
-                LET filter = filter,"%"
+                LET filter = "%",filter,"%"
                 OPEN airport_curs USING filter, filter, filter, filter
                 FOR i = 1 TO COMPLETER_LIST_SIZE
                     FETCH airport_curs INTO airport.code, airport.name, airport.city, airport.country 
