@@ -1,7 +1,9 @@
 # ex_autocomplete
 Examples showing the new autocomplete functionality that was added in Genero 3.0
 
-Type a country into the first field and note the auto complete options that appear.  Select an option to save typing
+Type a country into the first field and note the auto complete options that appear.  
+
+Type a place name or airport code into the second edit widget.
 
 Note what happens if you type slowly versus type quickly.  The ON CHANGE won't be called unless a certain number of milliseconds elapse
 
