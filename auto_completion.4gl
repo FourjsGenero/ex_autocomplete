@@ -27,7 +27,7 @@ DEFINE country_name CHAR(50)
 
     CALL ui.Interface.LoadStyles("auto_completion")
     
-    CONNECT TO ":memory:"
+    CONNECT TO ":memory:+driver='dbmsqt'"
     LET m_country_cursor_prepared = FALSE
     LET m_airport_cursor_prepared = FALSE
     CALL init_database()
