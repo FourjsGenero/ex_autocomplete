@@ -12,10 +12,12 @@ Examples showing the autocomplete functionality in Genero.
 ## Usage
 
 Type a country into the first field and note the auto complete options that appear.
-![Country Example](https://user-images.githubusercontent.com/13615993/32220095-4f9ba1cc-be95-11e7-99f2-cbcb2bd324da.png)
+
+<img alt="CountryExample" src="https://user-images.githubusercontent.com/13615993/32220095-4f9ba1cc-be95-11e7-99f2-cbcb2bd324da.png" width="50%"/>
 
 Type a place name or airport code into the second edit widget.
-![Airpot Example](https://user-images.githubusercontent.com/13615993/32220097-4fd32ef8-be95-11e7-886f-3bd42c090078.png)
+
+<img alt="Airport Example" src="https://user-images.githubusercontent.com/13615993/32220097-4fd32ef8-be95-11e7-886f-3bd42c090078.png" width="50%" />
 
 Note what happens if you type slowly versus type quickly.
 The ON CHANGE won't be called unless a certain number of milliseconds elapse.
