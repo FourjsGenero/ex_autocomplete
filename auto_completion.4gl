@@ -9,9 +9,9 @@ DEFINE iata_code STRING -- NOT CHAR(3)???
 DEFINE iata_code_c3 CHAR(3)
 DEFINE airport RECORD
     code CHAR(3),
-    name CHAR(40),
-    city CHAR(40),
-    country CHAR(40)
+    name CHAR(60),
+    city CHAR(60),
+    country CHAR(60)
 END RECORD
 DEFINE autoset BOOLEAN
 
