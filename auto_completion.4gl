@@ -106,7 +106,8 @@ DEFINE country_name CHAR(50)
             ELSE
                 CALL DIALOG.setCompleterItems(NULL)
             END IF
-
+            
+        AFTER FIELD iata_code
             --Save current value to working copy
             LET iata_code_c3 = iata_code.subString(1,3)
             
