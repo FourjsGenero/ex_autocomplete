@@ -39,6 +39,7 @@ DEFINE country_name CHAR(50)
 
     INPUT BY NAME country, autoset, iata_code_c3, iata_code ATTRIBUTES(UNBUFFERED, WITHOUT DEFAULTS=TRUE)
         ON CHANGE country
+            # DISPLAY LENGTH(FGL_DIALOG_GETBUFFER()),"-",FGL_DIALOG_GETBUFFER()
         
             IF NOT m_country_cursor_prepared THEN
                 DECLARE country_curs CURSOR FROM SFMT("SELECT name FROM country WHERE UPPER(name) LIKE UPPER(?) ORDER BY name LIMIT %1",COMPLETER_LIST_SIZE)
@@ -86,6 +87,7 @@ DEFINE country_name CHAR(50)
                 DECLARE airport_curs CURSOR FROM SFMT("SELECT iata_code, name, city, country FROM airport WHERE iata_code IS NOT NULL AND (iata_code LIKE ? OR UPPER(name) LIKE ? OR UPPER(city) LIKE ? OR UPPER(country) LIKE ?) ORDER BY iata_code LIMIT %1",COMPLETER_LIST_SIZE)
                 LET m_airport_cursor_prepared = TRUE
             END IF
+            # DISPLAY LENGTH(FGL_DIALOG_GETBUFFER()),"-",FGL_DIALOG_GETBUFFER()
           
             -- What user is currently typing is in the buffer, add % for LIKE 
             CALL completer_list.clear()
@@ -112,6 +114,7 @@ DEFINE country_name CHAR(50)
             LET iata_code_c3 = iata_code.subString(1,3)
             
         ON ACTION current_value ATTRIBUTES(TEXT="Current Value")
+            LET iata_code_c3 = iata_code.subString(1,3)
             CALL FGL_WINMESSAGE("Info",SFMT("Current country value = %1\nCurrent IATA code value = %2\nCurrent IATA Code value truncated to CHAR(3) = %3",country, iata_code, iata_code_c3),"info")
     END INPUT
 END MAIN
