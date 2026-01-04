@@ -1,25 +1,45 @@
 LAYOUT (TEXT="AutoCompletion")
-VBOX
+VBOX (SPLITTER)
 GROUP (TEXT="Simple Example")
 GRID
 {
-Country:     [f01                        ]
-Autoset:     [x]
+Country:     [f00                                                              ]
+}
+END
+END
+GROUP (TEXT="Additional Features Example")
+GRID
+{
+Country:       [f01                                                            ]
+Minimum Length:[f02m      ]
+Autoset:       [x]
+}
+END
+END
+GROUP (TEXT="TagEdit Example")
+GRID
+{
+Countries:   [f02                                                              ]
 }
 END
 END
 GROUP (TEXT="Two Valued Example")
 GRID
 {
-Airport:    [l02:"-":f02                        ]
+Airport:    [l03:"-":f03                                                       ]
 }
 END
 END
 END
 END
 ATTRIBUTES
-EDIT f01 = formonly.country, COMPLETER, STRETCH=X, COMMENT="Enter a country";
+EDIT f00 = formonly.country, COMPLETER, STRETCH=X, COMMENT="Enter a country";
+
+EDIT f01 = formonly.country2, COMPLETER, STRETCH=X, COMMENT="Enter a country";
+SPINEDIT f02m = formonly.minimum_completer_length, VALUEMIN=0, COMMENT="enter a minimum length for the completer";
 CHECKBOX x = formonly.autoset, VALUECHECKED=TRUE, VALUEUNCHECKED=FALSE, NOT NULL, COMMENT="Select to set if one item in list";
 
-LABEL l02 = formonly.iata_code_c3, SIZEPOLICY=FIXED;
-EDIT f02 = formonly.iata_code, COMPLETER, STRETCH=X, SCROLL, UPSHIFT, COMMENT="Enter departure airport";
+EDIT f02 = formonly.countries, COMPLETER, STYLE="tagedit", SCROLL, STRETCH=X, COMMENT="Enter countries";
+
+LABEL l03 = formonly.iata_code_c3, SIZEPOLICY=FIXED;
+EDIT f03 = formonly.iata_code, COMPLETER, STRETCH=X, SCROLL, UPSHIFT, COMMENT="Enter departure airport";
