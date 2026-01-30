@@ -15,7 +15,7 @@ Note how typing fr, a list of countries that begin fr have appeared ...
 
 <img width="1259" height="750" alt="Image" src="https://github.com/user-attachments/assets/87cfdacb-7bf4-453e-a135-3c3a31e223b2" />
 
-Field 2 - Country.  This is a more complex example.  It includes an option to only bring up the auto-completion list after the selected number of characters have been entered.  It also has an option in that the event of the completion list only having ione item, this item will be selected.  Also changes background color of field (green if good value, red if bad value).
+Field 2 - Country.  This is a more complex example.  It includes an option to only bring up the auto-completion list after the selected number of characters have been entered.  It also has an option in that the event of the completion list only having one item, this item will be selected.  Also changes background color of field (green if good value, red if bad value).
 
 The screenshot shows no list as only two characters have been entered ...
 
