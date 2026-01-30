@@ -7,7 +7,7 @@ Examples showing the autocomplete / (completer) functionality in Genero.
 
 ## Usage
 
-Exmaple consists of four fields that demonstrate the use of the COMPLETER attribute for use with auto-completion of fields.
+Example consists of four fields that demonstrate the use of the COMPLETER attribute for use with auto-completion of fields.
 
 Field 1 - Country.  This is a simple example that demonstrates as you type letters into the field, auto completion options will appear.
 
